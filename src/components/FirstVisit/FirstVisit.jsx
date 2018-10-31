@@ -44,6 +44,12 @@ class FirstVisit extends Component {
             console.log("CommonGateway is working fine, POST call response is here : ", this.props[reducerKeyPost]);
             this.props.commonGatewayRequestDone({ reducerKey: reducerKeyPost });
         }
+
+        /** Error Handler, when any api results failure */
+        if (this.props[ERROR]) {
+            console.log("CommonGateway is working fine, API results Error : ", this.props[ERROR]);
+            this.props.commonGatewayRequestDone({ reducerKey: ERROR });
+        }
     }
 
     render() {
@@ -54,6 +60,7 @@ class FirstVisit extends Component {
             new_arrivals = firstVisitData.new_arrivals;
         return (
             <div>
+                <h3 style={{ "paddingLeft": "85px" }}><strong>FirstVisit : </strong></h3>
                 <section className=" first-visit">
                     <div className="container">
                         <div className="row">
