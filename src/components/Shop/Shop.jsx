@@ -14,17 +14,20 @@ class Shop extends Component {
         /** Assigning data from props (Used ES6) */
         const { shopData } = this.props;
         return (
-            <section className="twxt" style={{ "marginTop": "77px" }}>
-                <div className="container">
-                    <section className="image-effect">
-                        <div className="row">
-                            {shopData && shopData.our_shop.map((item, index) => {
-                                return this.displayShop(item, index)
-                            })}
-                        </div>
-                    </section>
-                </div>
-            </section>
+            <div>
+                <h3 style={{ "paddingLeft": "85px" }}><strong>Shop : </strong></h3>
+                <section className="twxt" style={{ "marginTop": "77px" }}>
+                    <div className="container">
+                        <section className="image-effect">
+                            <div className="row">
+                                {shopData && shopData.our_shop.map((item, index) => {
+                                    return this.displayShop(item, index)
+                                })}
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
         );
     }
 
